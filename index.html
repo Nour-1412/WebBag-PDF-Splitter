@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تقسيم ملفات PDF مجانًا | WebBag</title>
+
+<meta name="description" content="قسّم ملفات PDF إلى صفحات منفصلة أو نطاقات محددة بسهولة وأمان مباشرة من متصفحك.">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <h1>تقسيم ملفات PDF</h1>
+
+    <p class="subtitle">
+      استخرج صفحة واحدة أو نطاق صفحات من ملف PDF بسهولة وأمان.
+    </p>
+
+    <label class="upload-box" for="pdfInput">
+      اختر ملف PDF
+    </label>
+
+    <input
+      type="file"
+      id="pdfInput"
+      accept=".pdf"
+    >
+
+    <div id="fileInfo" class="file-info"></div>
+
+    <div id="controls" class="controls">
+
+      <div class="field">
+
+        <label>من الصفحة</label>
+
+        <input
+          type="number"
+          id="startPage"
+          min="1"
+        >
+
+      </div>
+
+      <div class="field">
+
+        <label>إلى الصفحة</label>
+
+        <input
+          type="number"
+          id="endPage"
+          min="1"
+        >
+
+      </div>
+
+      <button id="splitBtn">
+        استخراج الصفحات
+      </button>
+
+    </div>
+
+    <div id="statusBox" class="status-box"></div>
+
+    <a
+      id="downloadBtn"
+      class="download-btn"
+      download="webbag-split.pdf"
+    >
+      تنزيل الملف
+    </a>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
